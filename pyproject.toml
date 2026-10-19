@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "otel-ebpf-span-aggregator"
+version = "0.2.0"
+description = "High-throughput OpenTelemetry tail-based trace sampler, DDSketch relative-error latency quantile aggregator, and Linux cgroup v2 container telemetry correlator"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "Abdullah Azmi", email = "m4u5t4@u.northwestern.edu" }
+]
+keywords = ["opentelemetry", "distributed-tracing", "ddsketch", "tail-sampling", "cgroup-v2", "ebpf", "observability"]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+]
+
+[project.urls]
+Homepage = "https://abdullahazmi.com"
+Repository = "https://github.com/aazminu/otel-ebpf-span-aggregator"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-v"
