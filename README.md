@@ -149,3 +149,18 @@ assert decision.reason.value == "ERROR_SPAN"
 ## License
 
 MIT License © 2026 Abdullah Azmi.
+
+
+## CLI Diagnostics & Invariant Verification
+
+Run the built-in deterministic diagnostic probe and invariant self-check directly via the module CLI:
+
+```bash
+PYTHONPATH=src python -m otel_aggregator --self-test --json
+```
+
+Run the complete regression test suite:
+
+```bash
+PYTHONPATH=src pytest -q
+```
